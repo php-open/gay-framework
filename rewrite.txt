@@ -1,0 +1,35 @@
+﻿
+Rewrite配置：
+
+#############################################------------------ Apache .htaccess
+根目录demo：
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
+
+子目录demo：
+RewriteEngine On
+RewriteBase /GAY/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /GAY/index.php [L]
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
+
+#############################################------------------ Nginx .conf
+根目录demo：
+if (!-f $request_filename){
+	rewrite (.*) /index.php last;
+}
+
+子目录demo：
+if (!-f $request_filename){
+    rewrite /GAY/(.*)  /GAY/index.php last;
+}
+
