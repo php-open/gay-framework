@@ -3,13 +3,13 @@
 配置文件: /config.inc.php
 核心文件: /system/class/class_core.php
 
-#URL支持路由访问方式:
+URL支持路由访问方式:
 (1)HOST/?c=demo&f=display&id=3&gid=5
 (2)[Rewrite] HOST/demo/display/?id=3&gid=5
 (3)[Rewrite] HOST/demo/display/id-3/gid-5
 (4)[Rewrite] HOST/demo/display/id-3/gid-5.html
 (5)[Rewrite] HOST/demo-display-id-3.html
-#URL自定义路由方式：
+URL自定义路由方式：
 配置文件：$_config['custom']['url']['open'] = 1
 [不推荐使用此模式，REST模式才使用]
 配置位置：/system/custom_URL.php
