@@ -1,11 +1,8 @@
-[gay-framework] php mvc framework 
+[gay-framework] [v1.0]
 =============
-
-GAY[v1.0]
-----------------------------------------------------
 配置文件: /config.inc.php
 核心文件: /system/class/class_core.php
-----------------------------------------------------
+
 #URL支持路由访问方式:
 (1)HOST/?c=demo&f=display&id=3&gid=5
 (2)[Rewrite] HOST/demo/display/?id=3&gid=5
